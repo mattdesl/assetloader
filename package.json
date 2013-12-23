@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-	"signals": "git://github.com/millermedeiros/js-signals#v1.0.0"	
+    "signals": "git://github.com/millermedeiros/js-signals#v1.0.0",
+    "klasse": "~1.0.4"
   },
   "author": "Matt DesLauriers",
   "license": "BSD-2-Clause"
