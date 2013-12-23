@@ -1,0 +1,14 @@
+{
+  "name": "assetloader",
+  "version": "0.0.0",
+  "description": "An asynchronous asset manager for Canvas/WebGL images and resources",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+	"signals": "git://github.com/millermedeiros/js-signals#v1.0.0"	
+  },
+  "author": "Matt DesLauriers",
+  "license": "BSD-2-Clause"
+}
