@@ -25,7 +25,7 @@ var AssetLoader = new Class({
 	 * A read-only property that describes the number of 
 	 * assets remaining to be loaded.
 	 *
-	 * @attribute remaining
+	 * @property remaining
 	 * @type {Number}
 	 * @readOnly
 	 */
@@ -39,13 +39,27 @@ var AssetLoader = new Class({
 	 * A read-only property that descriibes the total
 	 * number of assets in this AssetLoader.
 	 * 
-	 * @attribute total
+	 * @property total
 	 * @readOnly
 	 * @type {Number}
 	 */
 	total: {
 		get: function() {
 			return this.__totalItems;
+		}
+	},
+
+	/**
+	 * A convenience read-only getter for the current progress,
+	 * which is the same as total - remaining.
+	 * 
+	 * @property current
+	 * @readOnly
+	 * @type {Number}
+	 */
+	current: {
+		get: function() {
+			return this.total - this.remaining;
 		}
 	},
 
