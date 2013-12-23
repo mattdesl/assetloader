@@ -1,4 +1,4 @@
-var AssetQueue = require("assets");
+var AssetQueue = require("assetloader");
 var ImageLoader = require('./ImageLoader.js');
 
 

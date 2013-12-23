@@ -460,6 +460,7 @@ var AssetLoader = new Class({
 		return -1;
 	},
 
+
 	__loadCallback: function(name, success) {
 		//if 'false' was passed, use it.
 		//otherwise treat as 'true'
@@ -534,10 +535,11 @@ var AssetLoader = new Class({
 		//apply the loading step
 		var loader = nextTask.loadFunc;
 
-		var cb = this.__loadCallback.bind(this, nextTask.name);
+		var cb = this.__loadCallback.bind(this, nextTask.name, true);
+		var cbFail = this.__loadCallback.bind(this, nextTask.name, false);
 
 		//do the async load ...
-		loader.call(this, cb);
+		loader.call(this, cb, cbFail);
 
 		return (this.__loadCount === 0);
 	},

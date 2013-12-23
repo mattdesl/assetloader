@@ -8,20 +8,20 @@ function ImageLoader(name, path) {
 		
 		value: img,
 
-		load: function(finished) {
+		load: function(onComplete, onError) {
 			img.onload = function() {
 				img.onerror = img.onabort = null; //clear other listeners
-				finished();
+				onComplete();
 			};
 			img.onerror = function() {
 				img.onload = img.onabort = null;
 				console.warn("Error loading image: "+path);
-				finished(false);
+				onError();
 			};
 			img.onabort = function() {
 				img.onload = img.onerror = null;
 				console.warn("Aborted image: "+path);
-				finished(false);
+				onError();
 			};
 			//setup source
 			
