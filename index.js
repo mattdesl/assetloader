@@ -1,5 +1,6 @@
 var Class = require('klasse');
 var Signal = require('signals');
+var ImageLoader = require('./ext/ImageLoader');
 
 function registerLoader(loaders, loaderFunc, extensions, mediaType) {
 	if (!loaderFunc || !extensions || !extensions.length)
@@ -627,5 +628,8 @@ AssetLoader.Status = {
 	LOAD_SUCCESS: "LOAD_SUCCESS",
 	LOAD_FAIL: "LOAD_FAIL"
 };
+
+//By default, image types are registered.
+AssetLoader.registerCommonLoader(ImageLoader);
 
 module.exports = AssetLoader;
