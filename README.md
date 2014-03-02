@@ -5,9 +5,9 @@ This is a simple preloading queue for images, ideal for canvas games with a rend
 # example
 
 ```js
-var AssetQueue = require("assetloader");
+var AssetLoader = require("assetloader");
 
-var assets = new AssetQueue();
+var assets = new AssetLoader();
 
 //We can optionally listen for events like so:
 assets.loadStarted.add(function(ev) {

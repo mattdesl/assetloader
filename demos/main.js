@@ -1,7 +1,7 @@
-var AssetQueue = require("assetloader");
+var AssetLoader = require("assetloader");
 
 //By default, Image types are loaded.
-var assets = new AssetQueue();
+var assets = new AssetLoader();
 
 assets.loadStarted.add(function(ev) {
     console.log("LOAD STARTED", ev);
