@@ -11,5 +11,12 @@
     "klasse": "~1.0.4"
   },
   "author": "Matt DesLauriers",
-  "license": "BSD-2-Clause"
+  "license": "BSD-2-Clause",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mattdesl/assetloader"
+  },
+  "bugs": {
+    "url": "https://github.com/mattdesl/assetloader/issues"
+  }
 }
