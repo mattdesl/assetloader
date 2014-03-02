@@ -171,6 +171,9 @@ var AssetLoader = new Class({
 				this.loaders[k] = AssetLoader.commonLoaders[k];
 			}
 		}
+
+		//We register the image loader by default
+		this.registerLoader(ImageLoader);
 	},
 
 	/**
@@ -628,8 +631,5 @@ AssetLoader.Status = {
 	LOAD_SUCCESS: "LOAD_SUCCESS",
 	LOAD_FAIL: "LOAD_FAIL"
 };
-
-//By default, image types are registered.
-AssetLoader.registerCommonLoader(ImageLoader);
 
 module.exports = AssetLoader;
