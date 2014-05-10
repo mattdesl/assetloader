@@ -359,9 +359,11 @@ var AssetLoader = new Class({
 	 * @param  {Array} array 
 	 */
 	addAll: function(array) {
+		var ret = new Array(array.length);
 		for (var i=0; i<array.length; i++) {
-			this.add(array[i]);
+			ret[i] = this.add(array[i]);
 		}
+		return ret;
 	},
 
 	/**
@@ -571,7 +573,20 @@ var AssetLoader = new Class({
 	 */
 	registerLoader: function(loader) {
 		registerLoader(this.loaders, loader, loader.extensions, loader.mediaType);
-	}
+	},
+
+	/**
+	 * Starts the async loader. This method doesn't require polling update()
+	 * every frame. It will run through all the tasks and 
+	 * 
+	 * @return {[type]} [description]
+	 */
+	load: function() {
+		while (this.tasks.length > 0) {
+			console.log("next task... cur:", this.tasks.length);
+			this.update();
+		}
+	},
 });
 	
 /**
