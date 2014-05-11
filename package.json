@@ -1,6 +1,6 @@
 {
   "name": "assetloader",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "An asynchronous asset manager for Canvas/WebGL images and resources",
   "main": "index.js",
   "scripts": {
