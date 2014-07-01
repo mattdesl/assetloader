@@ -583,7 +583,6 @@ var AssetLoader = new Class({
 	 */
 	load: function() {
 		while (this.tasks.length > 0) {
-			console.log("next task... cur:", this.tasks.length);
 			this.update();
 		}
 	},
